@@ -27,6 +27,7 @@
             ```c#
             batchFieldControl += eventhandler(batchFieldControl.OnValidated)
             ```
+        - The onLookup method syntax can be copied from any form control.
 - canRunInNewSession
     - Method that defines wether we start a new session to execute the batch logig.
         - set to -> 'return false'
@@ -38,3 +39,30 @@
 2. Create a menu extension in the correct F&O Module.
     - Select the correct menu item type
     - Select the newly created menu item action as the menu item name
+
+## Method implementation
+
+### OnLookup
+
+For the OnLookUp implementation we want to create the following logic:
+1. Initialize a sysReferenceTableLookup object using the formControl & tableNum of the table as parameters
+     ```c#
+    SysReferenceTableLookup::newParameters(tableNum(Table1), formControl);
+    ```
+2. We want to pass a query to this lookup variable
+    ```c#
+    sysTableLookup.parmQuery(query);
+    ```
+3. Thirdly we want to add lookup fields for the fields we want to show in the dropdown
+    ```c#
+    sysTableLookup.addLookupField(fieldNum(TableName,FieldName));
+    ```
+4. Lastly we want to return the result of the sysTableLookup performLookup method.
+    ```c#
+    return sysTableLookup.performLookup();
+    ```
+
+
+
+
+
