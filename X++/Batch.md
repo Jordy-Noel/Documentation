@@ -49,7 +49,7 @@ For the OnLookUp implementation we want to create the following logic:
      ```c#
     SysReferenceTableLookup::newParameters(tableNum(Table1), formControl);
     ```
-2. We want to pass a query to this lookup variable
+2. We want to pass a query to this lookup variable. This query is a [SysQuery](SysQuery.md)
     ```c#
     sysTableLookup.parmQuery(query);
     ```
