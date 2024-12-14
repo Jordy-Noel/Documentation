@@ -1,0 +1,3 @@
+# Azure trainings
+
+- Azure fundamentals
