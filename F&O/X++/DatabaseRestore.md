@@ -15,4 +15,6 @@
 8. Once the wizard is finished your newly created DB should be visible in the Database nodes.
 9. Copy the destination database
 10. Restore the new database onto the target database.
+    - Create a bak file
+    - REstore via that bak file (close existing connecitons)
 11. Restart your AOS.
